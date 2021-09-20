@@ -1,0 +1,42 @@
+@services-bg: {
+  discord: #7289da;
+  tiktok: #000;
+  youtube: #F00;
+  vk: #4680C2;
+  instagram: #E4405F;
+  twitter: #1DA1F2;
+  twitch: #9146FF;
+}
+
+.aa_social-links_line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 20px;
+  font-size: 10px;
+  text-align: center;
+
+  i {
+    margin-right: 8px;
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+  }
+
+  &:hover {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  &:active {
+    color: #fff;
+  }
+
+  each(@services-bg, {
+      &--type-@{key} {
+        background-color: @value;
+      }
+    }
+
+  );
+}
